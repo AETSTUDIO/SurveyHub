@@ -1,15 +1,26 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import StripeBilling from "./StripeBilling";
 
 class Header extends Component {
   render() {
-    let loginLink = null;
+    let loggedInLinks = null;
 
-    loginLink = this.props.auth ? (
-      <a href="/api/logout">Logout</a>
+    loggedInLinks = this.props.auth ? (
+      <React.Fragment>
+        <li>
+          <StripeBilling />
+        </li>
+        <li style={{ margin: "0 5px 0 10px" }}>Credits: {this.props.auth.credits}</li>
+        <li>
+          <a href="/api/logout">Logout</a>
+        </li>
+      </React.Fragment>
     ) : (
-      <a href="/auth/google">Login With Google</a>
+      <li>
+        <a href="/auth/google">Login With Google</a>
+      </li>
     );
 
     return (
@@ -21,9 +32,7 @@ class Header extends Component {
           >
             SurveyHub
           </Link>
-          <ul className="right">
-            <li>{loginLink}</li>
-          </ul>
+          <ul className="right">{loggedInLinks}</ul>
         </div>
       </nav>
     );
