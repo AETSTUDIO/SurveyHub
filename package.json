@@ -24,6 +24,8 @@
     "nodemon": "^1.19.1",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^2.0.0",
+    "redux-form": "^8.2.4",
+    "sendgrid": "^5.2.3",
     "stripe": "^7.1.0"
   }
 }

@@ -4,9 +4,8 @@ import { connect } from "react-redux";
 import * as actions from "../actions";
 const Header = React.lazy(() => import("./Header"));
 const Landing = React.lazy(() => import("./Landing"));
-
-const Dashboard = () => <h2>Dashboard</h2>;
-const SurveyNew = () => <h2>SurveyNew</h2>;
+const Dashboard = React.lazy(() => import("./Dashboard"));
+const SurveyNew = React.lazy(() => import("./surveys/SurveyNew"));
 
 class App extends Component {
   componentDidMount() {
