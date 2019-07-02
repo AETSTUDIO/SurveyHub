@@ -7,7 +7,7 @@ class StripeBilling extends Component {
   render() {
     return (
       <StripeCheckout
-        name="SurveyHub Payment Form"
+        name="SurveyExpress Payment Form"
         description="$5 for 5 email survey credits"
         amount={500} //AUS Cents
         token={token => this.props.handleToken(token)} //Token from Stripe
