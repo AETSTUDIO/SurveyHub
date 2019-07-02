@@ -3,8 +3,8 @@ import React from "react";
 const Landing = () => {
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>Welcome to Survey Hub</h1>
-      Collect feedback from your users
+      <h1>Welcome to Survey Express</h1>
+      A Powerfull Application to collect feedback from your users
     </div>
   );
 };

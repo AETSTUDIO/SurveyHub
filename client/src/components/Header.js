@@ -30,7 +30,7 @@ class Header extends Component {
             to={this.props.auth ? "/surveys" : "/"}
             className="left brand-logo"
           >
-            SurveyHub
+            Survey Express
           </Link>
           <ul className="right">{loggedInLinks}</ul>
         </div>
